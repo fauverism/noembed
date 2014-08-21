@@ -32,7 +32,7 @@ about external URLs, which can then be embeded HTML pages. Noembed
 supports a large list of sites and makes it easy to add more.
 
 To add a new site to Noembed create a new class that inherits from
-[Noembed::Source](http://search.cpan.org/perldoc?Noembed::Source), [Noembed::ImageSource](http://search.cpan.org/perldoc?Noembed::ImageSource), or [Noembed::oEmbedSource](http://search.cpan.org/perldoc?Noembed::oEmbedSource)
+[Noembed::Source](docs/Source.html), [Noembed::ImageSource](docs/ImageSource.html), or [Noembed::oEmbedSource](docs/oEmbedSource.html) and override the required methods.
 and override the required methods.
 
 # EXAMPLES
