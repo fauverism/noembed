@@ -5,8 +5,14 @@ use parent 'Noembed::Provider';
 sub provider_name { "robertfauver" }
 sub patterns { 'http://www\.robertfauver\.com/+?$' }
 
-#what type of media to embed
+sub serialize {
+  
+  my ($self, $body) = @_;
+  my $data = $self->{scraper}->scrape($body);
 
-#paths
+  return {
+    title => $data->{alt},
+    html  => $self->render($data),
+  }
 
-#demo embed examples that aren't using iframes
+}
